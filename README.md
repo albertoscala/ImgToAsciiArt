@@ -44,6 +44,7 @@ Please make sure to update tests as appropriate and don't lame me, I'm not a sen
 [MIT](https://choosealicense.com/licenses/mit/)
 
 # Few examples
+NOTE: All the ascii results were edited on Notepad++
 
 # Source Image
 ![Lenna](https://user-images.githubusercontent.com/31989626/118847504-1630c200-b8ce-11eb-955a-4260bc221f80.png)
@@ -61,4 +62,5 @@ Please make sure to update tests as appropriate and don't lame me, I'm not a sen
 ![Spongebob](https://user-images.githubusercontent.com/31989626/118869525-c8c04f00-b8e5-11eb-88d5-9feeac4ff336.jpg)
 
 # Final Result
+![ascii3](https://user-images.githubusercontent.com/31989626/118869862-340a2100-b8e6-11eb-9e74-e2e5967bd83d.PNG)
 
