@@ -53,7 +53,7 @@ NOTE: All the ascii results were edited on Notepad++
 ![Monnalisa](https://user-images.githubusercontent.com/31989626/118868626-b1cd2d00-b8e4-11eb-90ed-0aac29d70b42.jpg)
 
 # Final Result
-![ascii2](https://user-images.githubusercontent.com/31989626/118868643-b72a7780-b8e4-11eb-832b-b7d427c26f70.PNG)
+![ascii2](https://user-images.githubusercontent.com/31989626/118870073-73387200-b8e6-11eb-8ebd-880d3115a880.PNG)
 
 # Source Image
 ![Spongebob](https://user-images.githubusercontent.com/31989626/118869525-c8c04f00-b8e5-11eb-88d5-9feeac4ff336.jpg)
