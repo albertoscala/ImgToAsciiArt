@@ -49,7 +49,7 @@ Please make sure to update tests as appropriate and don't lame me, I'm not a sen
 ![Lenna](https://user-images.githubusercontent.com/31989626/118847504-1630c200-b8ce-11eb-955a-4260bc221f80.png)
 
 # Final Result
-![ascii](https://user-images.githubusercontent.com/31989626/118869340-8d258500-b8e5-11eb-9e5b-85d18cc5e08d.PNG)
+![ascii](https://user-images.githubusercontent.com/31989626/118869430-afb79e00-b8e5-11eb-93da-7fc7ae30bc31.PNG)
 
 # Source Image
 ![Monnalisa](https://user-images.githubusercontent.com/31989626/118868626-b1cd2d00-b8e4-11eb-90ed-0aac29d70b42.jpg)
