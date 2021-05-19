@@ -52,9 +52,10 @@ Please make sure to update tests as appropriate and don't lame me, I'm not a sen
 ![ascii](https://user-images.githubusercontent.com/31989626/118858637-ac1e1a00-b8d9-11eb-9692-c680554dc320.PNG)
 
 # Source Image
-![Monalisa](https://user-images.githubusercontent.com/31989626/118866419-41251100-b8e2-11eb-8084-e19a1449f68e.jpg)
+![Monnalisa](https://user-images.githubusercontent.com/31989626/118868626-b1cd2d00-b8e4-11eb-90ed-0aac29d70b42.jpg)
 
 # Final Result
+![ascii2](https://user-images.githubusercontent.com/31989626/118868643-b72a7780-b8e4-11eb-832b-b7d427c26f70.PNG)
 
 # Source Image
 
