@@ -5,10 +5,10 @@ import java.io.IOException;
 
 public class Greyscale
 {
-    private int contrast = 255;
+    private final int contrast = 255;
     private BufferedImage img;
-    private int height;
-    private int width;
+    private final int height;
+    private final int width;
 
     public Greyscale(String path) throws IOException {
         this.img = ImageIO.read(getClass().getResource(path));
@@ -25,6 +25,13 @@ public class Greyscale
             for(int j=0; j<this.height; j++)
             {
                 color = new Color(this.img.getRGB(i, j));
+                /**
+                 * Credits: https://www.dfstudios.co.uk/articles/programming/image-programming-algorithms/image-processing-algorithms-part-5-contrast-adjustment/
+                 *
+                 * The fist step in changing the contrast of an image is to calculate the contrast correction factor which
+                 * is given by the following formula: F = (259 * (C + 255)) / (255 * (259 - C)) // C stands for contrast
+                 * In second place we have to do the actual adjustment by following next formula: R' = F * (R - 128) + 128
+                 */
                 int red = (int)(factor * (color.getRed() - 128) + 128);
                 red = red < 0 ? 0 : red > 255 ? 255 : red;
                 int green = (int)(factor * (color.getGreen() - 128) + 128);
