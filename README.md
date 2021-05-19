@@ -4,7 +4,7 @@ Just another of the many programs that convert an image into an ascii image.
 
 ## Usage
 
-First, load the image you want to convert into the path: 
+First, load the image you want to convert into the path: (I have only tested on Intellij IDEA, idk for the others)
 ```
 .../resources/images
 ```
