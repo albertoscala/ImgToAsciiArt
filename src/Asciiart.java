@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.LinkedList;
 
 public class Asciiart
@@ -20,7 +21,7 @@ public class Asciiart
         this.height = img.getHeight();
         try
         {
-            if(this.collumns > this.width || this.collumns <= 0)
+            if(collumns > this.width || collumns <= 0)
             {
                 throw new SizeException("Collumns value not valid");
             }
@@ -107,5 +108,12 @@ public class Asciiart
             }
         }
         return img;
+    }
+
+    public static void main(String[] args) throws IOException {
+        Greyscale imgRGB = new Greyscale("/resources/images/prova.jpg");
+        Asciiart imgGS = new Asciiart(imgRGB.render(), 120, 0.43);
+        String imgASCII = imgGS.render();
+        System.out.println(imgASCII);
     }
 }
