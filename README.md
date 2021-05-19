@@ -8,7 +8,7 @@ First, load the image you want to convert into the path:
 ```
 .../resources/images
 ```
-Second, follow the instructions in the code below
+Second, edit the instruction in the main (in Asciiart.java) follow the instructions in the code below
 
 ```java
 public static void main(String[] args) throws IOException 
