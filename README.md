@@ -58,6 +58,7 @@ Please make sure to update tests as appropriate and don't lame me, I'm not a sen
 ![ascii2](https://user-images.githubusercontent.com/31989626/118868643-b72a7780-b8e4-11eb-832b-b7d427c26f70.PNG)
 
 # Source Image
+![Spongebob](https://user-images.githubusercontent.com/31989626/118869525-c8c04f00-b8e5-11eb-88d5-9feeac4ff336.jpg)
 
 # Final Result
 
