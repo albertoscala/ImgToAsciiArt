@@ -1,11 +1,13 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 
 public class Asciiart
 {
-    private String gscale = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
+    private String gscale = "`~!^()-_+=;:'\",.\\/|<>[]{";
     private BufferedImage img;
     private int tileHeight;
     private int tileWidth;
@@ -52,57 +54,48 @@ public class Asciiart
         }
     }
 
-    public String render()
-    {
+    public String render() {
         int avg;
         Color temp;
         String img = "";
         int y0, y1, x0, x1 = 0;
         LinkedList<Integer> computingAvg;
-        for(int i=0; i<this.rows; i++)
-        {
-            for(int j=0; j<this.collumns; j++)
-            {
+        for (int i = 0; i < this.rows; i++) {
+            for (int j = 0; j < this.collumns; j++) {
                 avg = 0;
                 computingAvg = new LinkedList<>();
-                y0 = i*this.tileHeight;
-                y1 = (i+1)*this.tileHeight;
+                y0 = i * this.tileHeight;
+                y1 = (i + 1) * this.tileHeight;
                 /**
                  * Last collumn correction
                  */
-                if(i == this.rows-1)
-                {
+                if (i == this.rows - 1) {
                     y1 = this.height;
                 }
-                x0 = j*this.tileWidth;
-                x1 = (j+1)*this.tileWidth;
+                x0 = j * this.tileWidth;
+                x1 = (j + 1) * this.tileWidth;
                 /**
                  * Last row correction
                  */
-                if(i == this.collumns-1)
-                {
+                if (i == this.collumns - 1) {
                     x1 = this.width;
                 }
                 /**
                  * Colletting grey intesity from
                  * surroundings cells of the img
                  */
-                for(int k=y0; k<y1; k++)
-                {
-                    for(int x=x0; x<x1; x++)
-                    {
+                for (int k = y0; k < y1; k++) {
+                    for (int x = x0; x < x1; x++) {
                         temp = new Color(this.img.getRGB(x, k));
                         computingAvg.add(temp.getRed());
                     }
                 }
-                for(int k=0; k<computingAvg.size(); k++)
-                {
+                for (int k = 0; k < computingAvg.size(); k++) {
                     avg += computingAvg.get(k);
                 }
-                avg = avg/computingAvg.size();
-                img += this.gscale.charAt((avg*69)/255);
-                if(j == this.collumns-1)
-                {
+                avg = avg / computingAvg.size();
+                img += this.gscale.charAt((avg*(this.gscale.length()-1))/255);
+                if (j == this.collumns - 1) {
                     img += "\n";
                 }
             }
@@ -111,9 +104,14 @@ public class Asciiart
     }
 
     public static void main(String[] args) throws IOException {
-        Greyscale imgRGB = new Greyscale("/resources/images/prova.jpg");
-        Asciiart imgGS = new Asciiart(imgRGB.render(), 120, 0.43);
+        Greyscale imgRGB = new Greyscale("/resources/images/sb.jpg");
+        Asciiart imgGS = new Asciiart(imgRGB.render(), 200, 0.5);
         String imgASCII = imgGS.render();
         System.out.println(imgASCII);
+        File ascii = new File("ascii.txt");
+        ascii.createNewFile();
+        FileWriter img = new FileWriter("ascii.txt");
+        img.write(imgASCII);
+        img.close();
     }
 }
