@@ -40,9 +40,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate and don't lame me, I'm not a senior developer with 10 years of experience with Java 
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
 # Few examples
 NOTE: All the ascii results were edited on Notepad++
 
