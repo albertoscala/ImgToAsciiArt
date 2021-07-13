@@ -1,10 +1,9 @@
 import java.awt.Color;
+import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 
-public class Greyscale
-{
+public class Greyscale {
     private final int contrast = 255;
     private BufferedImage img;
     private final int height;
@@ -16,15 +15,15 @@ public class Greyscale
         this.width = img.getWidth();
     }
 
-    public BufferedImage render()
-    {
+    public BufferedImage render() {
         Color color;
-        double factor = (259 * (this.contrast + 255)) / (255 * (259 - this.contrast));
+        double factor = (259 * (this.contrast + 255)) / (255 * (259 - this.contrast)); //TODO: Make a slider on this in the UI
         for(int i=0; i<this.width; i++)
         {
             for(int j=0; j<this.height; j++)
             {
                 color = new Color(this.img.getRGB(i, j));
+
                 /**
                  * Credits: https://www.dfstudios.co.uk/articles/programming/image-programming-algorithms/image-processing-algorithms-part-5-contrast-adjustment/
                  *
@@ -38,6 +37,7 @@ public class Greyscale
                 green = green < 0 ? 0 : green > 255 ? 255 : green;
                 int blue = (int)(factor * (color.getBlue() - 128) + 128);
                 blue = blue < 0 ? 0 : blue > 255 ? 255 : blue;
+
                 /**
                  * Credits: https://entropymine.com/imageworsener/grayscale/
                  *
