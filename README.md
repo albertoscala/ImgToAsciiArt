@@ -38,7 +38,7 @@ public static void main(String[] args) throws IOException
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate and don't lame me, I'm not a senior developer with 10 years of experience with Java 
+Please make sure to update tests as appropriate and don't blame me, I'm not a senior developer with 10 years of experience with Java 
 
 # Few examples
 NOTE: All the ascii results were edited on Notepad++
