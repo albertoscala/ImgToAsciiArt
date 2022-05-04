@@ -14,7 +14,7 @@ public class AsciiArt {
         this.directory = directory;
     }
 
-    public void openImage() {
+    private void openImage() {
         try {
             this.image = ImageIO.read(new File(this.directory));
         } catch (Exception e) {
@@ -22,7 +22,7 @@ public class AsciiArt {
         }
     }
 
-    public void toGreyscale() {
+    private void toGreyscale() {
 
         final double contrast = 255;
 
@@ -52,6 +52,9 @@ public class AsciiArt {
     }
 
     public String render() {
+        openImage();
+        toGreyscale();
+
         StringBuilder stringBuilder = new StringBuilder();
         for(int i=0; i<this.image.getHeight(); i+=8) {
             for(int j=0; j<this.image.getWidth()-1; j+=8) {
@@ -62,7 +65,7 @@ public class AsciiArt {
         return stringBuilder.toString();
     }
 
-    public void writeFile(String s) {
+    public static void writeFile(String s) {
         try {
             FileWriter myWriter = new FileWriter("art.txt");
             myWriter.write(s);
@@ -77,8 +80,6 @@ public class AsciiArt {
     public static void main(String[] args) {
 
         AsciiArt asciiArt = new AsciiArt(args[0]);
-        asciiArt.openImage();
-        asciiArt.toGreyscale();
-        asciiArt.writeFile(asciiArt.render());
+        AsciiArt.writeFile(asciiArt.render());
     }
 }
